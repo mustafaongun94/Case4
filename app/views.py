@@ -12,6 +12,7 @@ def shorten_url(request):
             existing_url = URL.objects.filter(original_url=original_url).first()
             if existing_url:
                 short_url = existing_url.short_url
+                url = existing_url
             # İlk defa girilen url'in kısaltmasını yapar.
             else:
                 short_url = get_random_string(length=6)
