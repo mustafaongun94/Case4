@@ -1,0 +1,8 @@
+<p>Your shortened URL has been visited {{ url.visit_count }} times:</p>
+{% if url.short_url %}
+    <p>Your URL has already been shortened:</p>
+    <p><a href="{{ url.short_url }}">{{ url.short_url }}</a></p>
+{% else %}
+    <p>Your URL has been shortened:</p>
+    <p><a href="{{ short_url }}">{{ short_url }}</a></p>
+{% endif %}
